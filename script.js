@@ -52,6 +52,10 @@ for (const pokemon of pokemons) {
     if (pokemon.type == "Pflanze") {
         type.style.color = "green";
     }
+    
+    card.addEventListener("click", function(){
+        console.log("Das Pokemon " + pokemon.name + " wurde geklickt");
+    });
 
     pokemonCards.appendChild(card);
 }

@@ -52,12 +52,26 @@ for (const pokemon of pokemons) {
     if (pokemon.type == "Pflanze") {
         type.style.color = "green";
     }
-    
+
+    function displaySinglePokemon(pokemon) {
+        const detailView = document.getElementById("pokemon-detail-view");
+        detailView.innerHTML = "";
+    }
+
+
     card.addEventListener("click", function(){
         console.log("Das Pokemon " + pokemon.name + " wurde geklickt");
+        pokemonCards.classList.toggle("d-none");
+        card.id = "pokemon-detail-view"
     });
 
     pokemonCards.appendChild(card);
 }
+
+let div = document.createElement("div");
+div.id = "pokemon-detail-view";
+div.classList.add("container");
+div.classList.add("d-none");
+document.body.appendChild(div);
 // Funktionen
 // Event Listener

@@ -27,14 +27,12 @@ pokemonCards.classList.add("container");
 document.body.appendChild(pokemonCards);
 
 
-// Detail-View vor der Schleife erstellen
 let div = document.createElement("div");
 div.id = "pokemon-detail-view";
 div.classList.add("container");
 div.classList.add("d-none");
 document.body.appendChild(div);
 
-// Anzeige-Funktion außerhalb der Schleife
 function displaySinglePokemon(pokemon) {
     const detailView = document.getElementById("pokemon-detail-view");
     detailView.innerHTML = "";
